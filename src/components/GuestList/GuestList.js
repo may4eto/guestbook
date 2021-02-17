@@ -19,8 +19,8 @@ export const GuestList = (props) => {
                                    <Guest guest={guest}/>
                                 </td>
                                <td className="align-middle">
-                                   <button type="button" className="btn btn-warning mr-2"onClick={()=>props.editGuest(guest)}>Edit</button>
-                                   <button type="button" className="btn btn-danger mr-2" onClick={()=>props.deleteGuest(guest.id)}>Delete</button>
+                                   <button type="button" className="btn btn-warning mb-2 mb-lg-0 mr-2"onClick={()=>props.editGuest(guest)}>Edit</button>
+                                   <button type="button" className="btn btn-danger mb-2 mb-lg-0 mr-2" onClick={()=>props.deleteGuest(guest.id)}>Delete</button>
                                </td>
                            </tr> 
                         ))

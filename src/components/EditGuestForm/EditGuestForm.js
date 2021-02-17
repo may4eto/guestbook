@@ -21,7 +21,7 @@ export const EditGuestForm = props => {
         <form className="pr-5" onSubmit={handleSubmit}>
         <div className="form-group">
             <label htmlFor="name">Name</label>
-            <div class="input-group mb-3 mr-3">
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">
                     <PersonIcon />
@@ -32,7 +32,7 @@ export const EditGuestForm = props => {
         </div>
         <div className="form-group">
             <label htmlFor="street">Street</label>
-            <div class="input-group mb-3 mr-3">
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">
                     <HomeIcon />
@@ -42,9 +42,9 @@ export const EditGuestForm = props => {
             </div>
         </div>
         <div className="d-flex">
-            <div className="form-group col-md-6 pl-0 pr-2">
+            <div className="form-group col-md-6 pl-0 pr-2 mb-1">
                 <label htmlFor="city">City</label>
-                <div class="input-group mb-3 mr-3">
+                <div class="input-group">
                     <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">
                         <LocationCityIcon />
@@ -53,9 +53,9 @@ export const EditGuestForm = props => {
                     <input required type="text" name="city" value={guest.city} className="form-control" onChange={handleInputChanged}></input>
                 </div>
             </div>
-            <div className="form-group col-md-6 pl-0 pr-0">
+            <div className="form-group col-md-6 pl-0 pr-0 mb-1">
                 <label htmlFor="zip">Zip</label>
-                <div class="input-group mb-3 mr-3">
+                <div class="input-group">
                     <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">
                         <MarkunreadMailboxIcon />
@@ -67,7 +67,7 @@ export const EditGuestForm = props => {
         </div>
         <div className="form-group mb-4">
             <label htmlFor="phone">Phone</label>
-            <div class="input-group mb-3 mr-3">
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">
                     <PhoneIcon />

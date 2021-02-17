@@ -31,7 +31,7 @@ export const AddGuestForm = (props) => {
         setInitialFocus();
     });
     return (
-        <form className="pr-5" onSubmit={handleSubmit}>
+        <form className="pr-md-5 mb-4 mb-md-0" onSubmit={handleSubmit}>
         <div className="form-group">
             <label htmlFor="name">Name</label>
             <div class="input-group mb-3 mr-3">
@@ -55,7 +55,7 @@ export const AddGuestForm = (props) => {
             </div>
         </div>
         <div className="d-flex">
-            <div className="form-group col-md-6 pl-0 pr-2">
+            <div className="form-group col-md-6 pl-0 pr-2 mb-1">
                 <label htmlFor="city">City</label>
                 <div class="input-group mb-3 mr-3">
                     <div class="input-group-prepend">
@@ -66,7 +66,7 @@ export const AddGuestForm = (props) => {
                     <input required type="text" name="city" value={guest.city} className="form-control" onChange={handleInputChanged}></input>
                 </div>
             </div>
-            <div className="form-group col-md-6 pl-0 pr-0">
+            <div className="form-group col-md-6 pl-0 pr-0 mb-1">
                 <label htmlFor="zip">Zip</label>
                 <div class="input-group mb-3 mr-3">
                     <div class="input-group-prepend">

@@ -46,25 +46,25 @@ export const App = () => {
   }
   return (
     <div className="container">
-      <h1 className="my-5">Please Sign My Guestbook</h1>
+      <h1 className="my-5 h2 md-h1">Please Sign My Guestbook</h1>
       <div className="row">
-        <div className="col">
+        <div className="col-12 col-md-6">
           {
           editing ? (
             <div>
-              <h2 className="mb-4">Edit Guest</h2>
+              <h2 className="h3 md-h2 mb-4">Edit Guest</h2>
               <EditGuestForm editing={editing} setEditing={setEditing} currentGuest={currentGuest} updateGuest={updateGuest}/>
             </div>
           ) : (
             <div>
-            <h2 className="mb-4">Sign In</h2>
+            <h2 className="h3 md-h2 mb-4">Sign In</h2>
             <AddGuestForm addGuest={addGuest} />
           </div>
           )
         }
         </div>
-        <div className="col">
-          <h2 className="mb-4">Guests</h2>
+        <div className="col-12 col-md-6">
+          <h2 className="h3 md-h2 mb-4 mb-md-5 mt-4 mt-md-0">Guests</h2>
           <GuestList guests={guests} deleteGuest={deleteGuest} editGuest={editGuest}/>
         </div>
       </div>
