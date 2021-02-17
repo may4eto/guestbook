@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import PersonIcon from '@material-ui/icons/Person';
 import HomeIcon from '@material-ui/icons/Home';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
 import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
 import PhoneIcon from '@material-ui/icons/Phone';
 export const AddGuestForm = (props) => {
-    const nameInputElement = useRef(null);
     const iniatialFormState = {
         id: null,
         name: '',
@@ -18,18 +17,12 @@ export const AddGuestForm = (props) => {
     const handleInputChanged = event => {
         const {name, value} = event.target;
         setGuest({...guest, [name]: value});
-    }
+    };
     const handleSubmit = event => {
         event.preventDefault();
         props.addGuest(guest);
         setGuest(iniatialFormState);
-    }
-    const setInitialFocus = () => {
-        nameInputElement.current.focus();
-    }
-    useEffect(() => {
-        setInitialFocus();
-    });
+    };
     return (
         <form className="pr-md-5 mb-4 mb-md-0" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -40,7 +33,7 @@ export const AddGuestForm = (props) => {
                     <PersonIcon />
                   </span>
                 </div>
-                <input required ref={nameInputElement} type="text" name="name" value={guest.name} className="form-control" onChange={handleInputChanged}></input>
+                <input required type="text" name="name" value={guest.name} className="form-control" onChange={handleInputChanged}></input>
             </div>
         </div>
         <div className="form-group">
